@@ -46,7 +46,7 @@ nav {
     box-shadow: 0px 3px 8px var(--shadow-color);
 }
 
-/* Navbar Toggler Fix (Center Button on Mobile) */
+/* Navbar Toggler Fix */
 .navbar-toggler {
     text-align: center;
     width: 100%;
@@ -84,71 +84,48 @@ h2 {
     text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
 }
 
-/* Profile Image (Ensure It Stays Circular) */
+/* Profile Image */
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50% !important; /* Ensures it stays circular */
+    border-radius: 50%;
     border: 3px solid var(--accent-teal);
     box-shadow: 0px 0px 15px var(--accent-teal);
     display: block;
     margin: 0 auto;
 }
 
-/* Image Container */
-.image-container img {
-    width: 500px;
-    display: block;
-    margin: 20px auto;
-    border: 3px solid var(--accent-teal);
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px var(--accent-teal);
-}
-
-/* Reusable Cyberpunk Box (Ensures Background Consistency) */
+/* Cyberpunk Box (Taller for Better Spacing) */
 .cyberpunk-box {
-    background-color: var(--secondary-bg) !important;
-    color: var(--accent-teal) !important;
+    background-color: var(--secondary-bg);
+    color: var(--accent-teal);
     border: 2px solid var(--accent-teal);
-    padding: 15px;
+    padding: 25px; /* Increased Padding for More Height */
     border-radius: 8px;
     box-shadow: 0px 0px 15px var(--shadow-color);
     text-align: center;
-    min-height: 300px; /* FIX: Increased Neon Box Height */
+    min-height: 200px; /* Ensures It Doesn't Collapse */
 }
 
-/* Programming Skills Section (Matches Projects Section) */
+/* Programming Skills */
 .cyberpunk-skills {
-    background-color: var(--secondary-bg) !important;
-    color: var(--accent-teal) !important;
-    border: 2px solid var(--accent-teal);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px var(--shadow-color);
     display: inline-block;
-    min-height: 300px; /* FIX: Match Neon Box Height */
+    padding: 20px;
 }
 
 .cyberpunk-skills li {
-    background-color: #002244 !important; /* Ensures same as projects */
-    color: var(--accent-teal) !important;
+    background-color: #002244;
+    color: var(--accent-teal);
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-/* Projects Section (Matches Programming Skills) */
+/* Projects Section */
 .cyberpunk-table {
-    background-color: var(--secondary-bg) !important;
-    color: var(--accent-teal) !important;
-    border: 2px solid var(--accent-teal);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px var(--shadow-color);
     text-align: center;
     font-weight: bold;
-    min-height: 300px; /* FIX: Match Neon Box Height */
 }
 
 .cyberpunk-table th {
@@ -158,20 +135,20 @@ h2 {
 
 .cyberpunk-table td {
     background: var(--secondary-bg);
-    color: var(--accent-teal) !important;
+    color: var(--accent-teal);
     border: 1px solid var(--accent-teal);
     font-weight: bold;
 }
 
-/* FIX: Video Styling for Web */
+/* Fix Video Size on Web */
 iframe {
-    max-width: 560px; /* Ensures it doesn't break layout */
     width: 100%;
-    height: auto;
+    max-width: 600px; /* Prevents It from Being Too Large */
+    height: 340px; /* Ensures Proper Aspect Ratio */
     aspect-ratio: 16/9;
     border: 2px solid var(--accent-teal);
     border-radius: 8px;
-    object-fit: cover; /* Ensures proper aspect ratio */
+    margin: 1rem auto;
 }
 
 /* Links */
@@ -187,17 +164,25 @@ a:hover {
     text-shadow: 0px 0px 8px var(--accent-teal);
 }
 
-/* Span Styling */
-span {
-    color: var(--accent-pink);
+/* Buttons */
+button, form button {
+    background-color: var(--accent-teal);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: #002244;
+    text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0px 0px 5px rgba(255, 0, 153, 0.8);
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px var(--accent-teal);
+    border-radius: 4px;
 }
 
-span:hover {
-    color: var(--accent-teal);
-    text-shadow: 0px 0px 8px rgba(0, 230, 230, 0.8);
+button:hover, form button:hover {
+    background-color: var(--accent-pink);
+    box-shadow: 0px 0px 15px var(--accent-pink);
+    color: #ffffff;
 }
 
 /* Footer */
