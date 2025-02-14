@@ -46,7 +46,6 @@ nav {
     box-shadow: 0px 3px 8px var(--shadow-color);
 }
 
-/* Navbar Toggler Fix */
 .navbar-toggler {
     text-align: center;
     width: 100%;
@@ -84,38 +83,64 @@ h2 {
     text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
 }
 
-/* Profile Image */
+/* Profile Image (Ensures It Stays Circular) */
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50% !important;
     border: 3px solid var(--accent-teal);
     box-shadow: 0px 0px 15px var(--accent-teal);
     display: block;
     margin: 0 auto;
 }
 
-/* Cyberpunk Box (Taller for Better Spacing) */
-.cyberpunk-box {
-    background-color: var(--secondary-bg);
-    color: var(--accent-teal);
+/* Image Container */
+.image-container img {
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid var(--accent-teal);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--accent-teal);
+}
+
+/* Video Fix for Vertical Stacking */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border: 2px solid var(--accent-teal);
-    padding: 25px; /* Increased Padding for More Height */
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Reusable Cyberpunk Box (Ensures Background Consistency) */
+.cyberpunk-box {
+    background-color: var(--secondary-bg) !important;
+    color: var(--accent-teal) !important;
+    border: 2px solid var(--accent-teal);
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px var(--shadow-color);
     text-align: center;
-    min-height: 200px; /* Ensures It Doesn't Collapse */
 }
 
-/* Programming Skills */
+/* Programming Skills Section */
 .cyberpunk-skills {
+    @extend .cyberpunk-box;
     display: inline-block;
-    padding: 20px;
 }
 
 .cyberpunk-skills li {
-    background-color: #002244;
-    color: var(--accent-teal);
+    background-color: #002244 !important;
+    color: var(--accent-teal) !important;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
@@ -124,6 +149,7 @@ h2 {
 
 /* Projects Section */
 .cyberpunk-table {
+    @extend .cyberpunk-box;
     text-align: center;
     font-weight: bold;
 }
@@ -135,20 +161,40 @@ h2 {
 
 .cyberpunk-table td {
     background: var(--secondary-bg);
-    color: var(--accent-teal);
+    color: var(--accent-teal) !important;
     border: 1px solid var(--accent-teal);
     font-weight: bold;
 }
 
-/* Fix Video Size on Web */
-iframe {
-    width: 100%;
-    max-width: 600px; /* Prevents It from Being Too Large */
-    height: 340px; /* Ensures Proper Aspect Ratio */
-    aspect-ratio: 16/9;
+/* Favorite Websites Section */
+#websites {
+    background-color: var(--secondary-bg) !important;
+    color: var(--accent-teal) !important;
     border: 2px solid var(--accent-teal);
+    padding: 15px;
     border-radius: 8px;
-    margin: 1rem auto;
+    box-shadow: 0px 0px 15px var(--shadow-color);
+    text-align: center;
+}
+
+#websites ul {
+    list-style: none;
+    padding: 0;
+}
+
+#websites li {
+    margin: 0.5rem 0;
+}
+
+#websites a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#websites a:hover {
+    color: var(--accent-pink);
+    text-shadow: 0px 0px 8px var(--accent-pink);
 }
 
 /* Links */
@@ -162,6 +208,19 @@ a {
 a:hover {
     color: var(--accent-teal);
     text-shadow: 0px 0px 8px var(--accent-teal);
+}
+
+/* Span Styling */
+span {
+    color: var(--accent-pink);
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 0, 153, 0.8);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+span:hover {
+    color: var(--accent-teal);
+    text-shadow: 0px 0px 8px rgba(0, 230, 230, 0.8);
 }
 
 /* Buttons */
@@ -183,6 +242,28 @@ button:hover, form button:hover {
     background-color: var(--accent-pink);
     box-shadow: 0px 0px 15px var(--accent-pink);
     color: #ffffff;
+}
+
+/* Forms */
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--accent-teal);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid var(--accent-teal);
+    border-radius: 4px;
+    background-color: var(--secondary-bg);
+    color: var(--accent-teal);
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Footer */
