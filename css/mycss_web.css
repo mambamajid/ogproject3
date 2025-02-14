@@ -104,7 +104,7 @@ h2 {
     box-shadow: 0px 0px 15px var(--accent-teal);
 }
 
-/* Video Fix for Proper Sizing on Web */
+/* Video Fix for Vertical Stacking */
 .video-container {
     display: flex;
     flex-direction: column;
@@ -112,15 +112,13 @@ h2 {
     gap: 1rem;
 }
 
-.video-container iframe {
-    width: 80%; /* Increased width for web */
-    max-width: 900px; /* Ensures videos don't stretch too much */
+iframe {
+    width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* Maintains correct proportions */
+    aspect-ratio: 16 / 9;
     border: 2px solid var(--accent-teal);
     border-radius: 8px;
-    box-shadow: 0px 0px 10px var(--shadow-color);
-    margin: 1rem auto;
+    margin: 1rem 0;
 }
 
 /* Reusable Cyberpunk Box (Ensures Background Consistency) */
