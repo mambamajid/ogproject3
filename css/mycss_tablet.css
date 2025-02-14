@@ -33,7 +33,6 @@
         z-index: 1000;
     }
 
-    /* Center Navbar Toggler (Fix for Off-Centered Issue on Mobile) */
     .navbar-toggler {
         text-align: center;
         width: 100%;
@@ -68,11 +67,11 @@
         box-shadow: 0px 0px 10px rgba(0, 204, 204, 0.5);
     }
 
-    /* Profile Image (Fix for Square Issue) */
+    /* Profile Image */
     .profile-img {
         width: 150px;
         height: 150px;
-        border-radius: 50% !important; /* Fix to Keep it Circular */
+        border-radius: 50% !important;
         border: 3px solid #00cccc;
         box-shadow: 0px 0px 10px #00cccc;
     }
@@ -96,21 +95,22 @@
         color: #00cccc;
     }
 
-    /* Video (iframe) Fix for Proper Stacking */
+    /* Video Fix for Tablet */
     .video-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem; /* Adjust spacing */
     }
 
-    iframe {
-        width: 100%;
+    .video-container iframe {
+        width: 90%; /* Slightly larger for tablet */
+        max-width: 850px;
         height: auto;
         aspect-ratio: 16 / 9;
         border: 2px solid #00cccc;
         border-radius: 8px;
-        margin: 1rem 0;
+        box-shadow: 0px 0px 10px rgba(0, 204, 204, 0.5);
     }
 
     /* Form Styling */
@@ -154,7 +154,7 @@
         box-shadow: 0px 0px 12px #ff0066;
     }
 
-    /* Programming Skills Section (Fixed Background Color) */
+    /* Programming Skills Section */
     #programming-skills {
         background-color: #002244 !important;
         color: #00e6e6 !important;
@@ -181,33 +181,23 @@
         box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
     }
 
-    /* Favorite Websites Section */
-    #websites {
-        background-color: #002244 !important;
-        color: #00e6e6 !important;
-        border: 2px solid #00e6e6;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
-        text-align: center;
-    }
-
-    #websites ul {
-        list-style: none;
+    /* Links Styling */
+    ul {
+        list-style-type: none;
         padding: 0;
     }
 
-    #websites li {
+    ul li {
         margin: 0.5rem 0;
     }
 
-    #websites a {
-        color: #00e6e6;
+    ul li a {
+        color: #00cccc;
         text-decoration: none;
-        transition: color 0.3s ease, text-shadow 0.3s ease;
+        transition: color 0.3s ease;
     }
 
-    #websites a:hover {
+    ul li a:hover {
         color: #ff0066;
         text-shadow: 0px 0px 8px #ff0066;
     }
@@ -215,14 +205,18 @@
     /* Bootstrap Grid Adjustments for Tablet */
     .row {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
+        flex-wrap: wrap;
+        margin: 0 -0.5rem;
     }
 
     .col-md-4, .col-md-6, .col-md-8 {
+        padding: 0 0.5rem;
         width: 100%;
-        text-align: center;
+    }
+
+    /* Adjust Education Image */
+    .education-image img {
+        max-width: 80%;
     }
 
     /* Progress Bar Styling */
@@ -270,29 +264,6 @@
         border-radius: 8px;
         padding: 1rem;
         margin: 1rem 0;
-    }
-}
-
-/* Print-Friendly Styles */
-@media print {
-    nav, button, iframe {
-        display: none;
-    }
-
-    body {
-        background-color: white;
-        color: black;
-        font-family: Arial, sans-serif;
-    }
-
-    h2 {
-        color: black;
-        text-shadow: none;
-    }
-
-    section {
-        box-shadow: none;
-        border: none;
     }
 }
 
