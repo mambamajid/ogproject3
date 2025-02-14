@@ -52,6 +52,30 @@
             color: #ff0099 !important;
             text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
         }
+
+        /* Video Container - Fix for Web (Keeps Border + 16:9 Aspect Ratio) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 20px auto;
+            border: 3px solid #00e6e6; /* Border is BACK */
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px #00e6e6;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +85,7 @@
     <h1 class="fw-bold text-glow">Majid's Profile Page</h1>
 </header>
 
-<!-- Navbar (Now with Teal Font & Centered Toggler) -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -90,7 +114,7 @@
     </div>
 </section>
 
-<!-- Education Section (Image is Fixed Now) -->
+<!-- Education Section -->
 <section id="education" class="container text-center mt-5">
     <h2 class="text-neon">Education Summary</h2>
     <p>I am currently pursuing a Bachelor's degree in IT with a concentration in Business Administration.</p>
@@ -105,7 +129,7 @@
     <p>I do not have formal work experience yet, but I have created games using p5.js.</p>
 </section>
 
-<!-- Programming Skills (Fixed Background Issue) -->
+<!-- Programming Skills -->
 <section id="programming-skills" class="container text-center mt-5 cyberpunk-bg">
     <h2 class="text-neon">Programming Skills</h2>
     <ul class="list-group mx-auto cyberpunk-list">
@@ -139,8 +163,7 @@
     </div>
 </section>
 
-
-<!-- Projects Section (Fixed Background Issue) -->
+<!-- Projects Section -->
 <section id="projects" class="container text-center mt-5 cyberpunk-bg">
     <h2 class="text-neon">My Projects</h2>
     <table class="table cyberpunk-table">
@@ -157,26 +180,6 @@
             </tr>
         </tbody>
     </table>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="container text-center mt-5">
-    <h2 class="text-neon">Contact Me</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="mx-auto w-100" style="max-width: 400px;">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name:</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message:</label>
-            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-        </div>
-        <button type="submit" class="btn cyberpunk-btn w-100">Send</button>
-    </form>
 </section>
 
 <!-- Bootstrap JS -->
