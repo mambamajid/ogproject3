@@ -1,0 +1,253 @@
+/* Cyberpunk-Inspired Web CSS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-color: #0a0f1c;
+    color: #00e6e6;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #002244, #004488);
+    color: #00e6e6;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 230, 230, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centering "Majid's Profile" */
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0px 0px 10px rgba(0, 230, 230, 0.8);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navigation Bar */
+nav {
+    background: #002244;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0px 3px 8px rgba(0, 230, 230, 0.5);
+}
+
+nav a {
+    color: #00e6e6;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff0099;
+    text-shadow: 0px 0px 8px #ff0099;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #001122;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+}
+
+/* Images */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #00e6e6;
+    box-shadow: 0px 0px 15px #00e6e6;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #00e6e6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #00e6e6;
+}
+
+/* Titles */
+h2 {
+    color: #ff0099;
+    text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+/* Programming Skills Section */
+.cyberpunk-skills {
+    background-color: #001122 !important;
+    color: #00e6e6 !important;
+    padding: 15px;
+    border: 2px solid #00e6e6;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+    display: inline-block;
+}
+
+.cyberpunk-skills li {
+    background-color: #002244;
+    color: #00e6e6;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Fixed Projects Section */
+.cyberpunk-table {
+    background-color: #001122 !important;
+    color: #00e6e6 !important; /* Ensures text is bright teal */
+    border: 2px solid #00e6e6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cyberpunk-table th {
+    background: #002244;
+    color: #00e6e6;
+}
+
+.cyberpunk-table td {
+    background: #001122;
+    color: #00e6e6 !important; /* Fixes dark text issue */
+    border: 1px solid #00e6e6;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #ff0099;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00e6e6;
+    text-shadow: 0px 0px 8px #00e6e6;
+}
+
+/* Span Styling */
+span {
+    color: #ff0099;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 0, 153, 0.8);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+span:hover {
+    color: #00e6e6;
+    text-shadow: 0px 0px 8px rgba(0, 230, 230, 0.8);
+}
+
+/* Buttons */
+button, form button {
+    background-color: #00e6e6;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: #002244;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px #00e6e6;
+    border-radius: 4px;
+}
+
+button:hover, form button:hover {
+    background-color: #ff0099;
+    box-shadow: 0px 0px 15px #ff0099;
+    color: #ffffff;
+}
+
+/* Forms */
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 0.5rem;
+    color: #00e6e6;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #00e6e6;
+    border-radius: 4px;
+    background-color: #001122;
+    color: #00e6e6;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Iframes */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: 2px solid #00e6e6;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background: #002244;
+    color: #00e6e6;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px -3px 8px rgba(0, 230, 230, 0.5);
+}
+
+/* Print-Friendly Styles */
+@media print {
+    nav, button, iframe {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        color: black;
+        text-shadow: none;
+    }
+
+    section {
+        box-shadow: none;
+        border: none;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majid's Profile Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/mycss_web.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width: 767px)">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Force Navbar Text to Teal */
+        .navbar-nav .nav-link {
+            color: #00e6e6 !important; /* Neon Teal */
+        }
+        
+        /* Ensure Navbar Hover Effect Works */
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important; /* White on hover */
+        }
+
+        /* Resize Education Image */
+        .education-image img {
+            max-width: 50%; /* Adjust this to control size */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="text-center p-4">
+    <h1 class="fw-bold text-glow">Majid's Profile Page</h1>
+</header>
+
+<!-- Navbar (Now with Teal Font) -->
+<nav class="navbar navbar-expand-lg cyberpunk-navbar">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#basic-info">Basic Info</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#work-experience">Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="#programming-skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Basic Profile Section -->
+<section id="basic-info" class="container text-center mt-5">
+    <div class="profile-card">
+        <img src="https://raw.githubusercontent.com/mambamajid/testingbeta/refs/heads/main/unnamed.jpg" alt="Profile Picture" class="profile-img">
+        <h2>Majid Talukder</h2>
+        <p>Bachelor in IT (Concentration: Business Administration)</p>
+    </div>
+</section>
+
+<!-- Education Section (Image is Fixed Now) -->
+<section id="education" class="container text-center mt-5">
+    <h2 class="text-neon">Education Summary</h2>
+    <p>I am currently pursuing a Bachelor's degree in IT with a concentration in Business Administration.</p>
+    <div class="education-image">
+        <img src="https://www.stjohns.edu/sites/default/files/2019-01/SJU_Spring2018-023_1600x900_0.jpg" alt="St. John's University">
+    </div>
+</section>
+
+<!-- Work Experience -->
+<section id="work-experience" class="container text-center mt-5">
+    <h2 class="text-neon">Work Experience</h2>
+    <p>I do not have formal work experience yet, but I have created games using p5.js.</p>
+</section>
+
+<!-- Programming Skills -->
+<section id="programming-skills" class="container text-center mt-5">
+    <h2 class="text-neon">Programming Skills</h2>
+    <ul class="list-group mx-auto cyberpunk-list" style="max-width: 300px;">
+        <li class="list-group-item cyberpunk-list">Java - Intermediate</li>
+        <li class="list-group-item cyberpunk-list">JavaScript - Intermediate</li>
+    </ul>
+</section>
+
+<!-- Favorites Section -->
+<section id="favorites" class="container text-center mt-5">
+    <h2 class="text-neon">Favorites</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Favorite Song</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/K4DyBUG242c?start=11" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+            <h4>Favorite Movie</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/6ZfuNTqbHE8?start=71" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+            <h4>Favorite TV Show</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/njtfNPB-YKg?start=71" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container text-center mt-5">
+    <h2 class="text-neon">My Projects</h2>
+    <table class="table cyberpunk-table">
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Profile Page</td>
+                <td>My online profile page for this course.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container text-center mt-5">
+    <h2 class="text-neon">Contact Me</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="mx-auto" style="max-width: 400px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn cyberpunk-btn w-100">Send</button>
+    </form>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
