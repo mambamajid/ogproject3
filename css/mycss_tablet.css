@@ -72,7 +72,7 @@
     .profile-img {
         width: 150px;
         height: 150px;
-        border-radius: 50% !important; /* Fix to Keep it Circular */
+        border-radius: 50% !important; /* Ensures It Stays Circular */
         border: 3px solid #00cccc;
         box-shadow: 0px 0px 10px #00cccc;
     }
@@ -96,11 +96,12 @@
         color: #00cccc;
     }
 
-    /* Video (iframe) Styling */
+    /* Fix for Video Size on Tablets */
     iframe {
         width: 100%;
+        max-width: 600px; /* Prevents It from Being Too Large */
         height: auto;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16/9;
         border: 2px solid #00cccc;
         border-radius: 8px;
         margin: 1rem 0;
@@ -147,7 +148,7 @@
         box-shadow: 0px 0px 12px #ff0066;
     }
 
-    /* Programming Skills Section (Fixed Background Color) */
+    /* Programming Skills Section (Fixed Background & Spacing) */
     #programming-skills {
         background-color: #002244 !important;
         color: #00e6e6 !important;
@@ -155,6 +156,7 @@
         padding: 15px;
         border-radius: 8px;
         box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+        min-height: 200px; /* Ensures It Has Enough Space */
     }
 
     .cyberpunk-skills li {
@@ -166,12 +168,18 @@
         font-weight: bold;
     }
 
-    /* Fix for Projects Section Background */
+    /* Fix for Projects Section Background & Height */
     #projects {
         background-color: #002244 !important;
         color: #00e6e6 !important;
         border-radius: 8px;
         box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+        min-height: 200px; /* Added Height Fix */
+    }
+
+    /* Fix for Neon Box in Tablet Mode */
+    .cyberpunk-box {
+        min-height: 220px; /* Slightly Taller for Better Visibility */
     }
 
     /* Links Styling */
