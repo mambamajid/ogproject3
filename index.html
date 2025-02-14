@@ -14,6 +14,53 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Force Navbar Text to Teal */
+        .navbar-nav .nav-link {
+            color: #00e6e6 !important; /* Neon Teal */
+        }
+
+        /* Ensure Navbar Hover Effect Works */
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important; /* White on hover */
+        }
+
+        /* Center Navbar Toggler (Fixes Off-Center Issue) */
+        .navbar-toggler {
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Resize Education Image */
+        .education-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.5);
+        }
+
+        /* Cyberpunk Border */
+        .cyberpunk-border {
+            border: 2px solid #00e6e6;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 230, 230, 0.5);
+        }
+
+        /* Ensure h2 Stays Pink on Mobile */
+        h2 {
+            color: #ff0099 !important;
+            text-shadow: 2px 2px 10px rgba(255, 0, 153, 0.8);
+        }
+
+        /* Video Scrolling Fix */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +69,7 @@
     <h1 class="fw-bold text-glow">Majid's Profile Page</h1>
 </header>
 
-<!-- Navbar -->
+<!-- Navbar (Now with Teal Font & Centered Toggler) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -36,6 +83,7 @@
                 <li class="nav-item"><a class="nav-link" href="#programming-skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#websites">Favorite Websites</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -75,59 +123,38 @@
     </ul>
 </section>
 
-<!-- Favorites Section -->
+<!-- Favorites Section (Videos are now stacked vertically) -->
 <section id="favorites" class="container text-center mt-5">
     <h2 class="text-neon">Favorites</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Favorite Song</h4>
-                <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/K4DyBUG242c?start=11" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-12">
-                <h4>Favorite Movie</h4>
-                <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/6ZfuNTqbHE8?start=71" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-12">
-                <h4>Favorite TV Show</h4>
-                <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/njtfNPB-YKg?start=71" allowfullscreen></iframe>
-            </div>
+    <div class="video-container">
+        <div>
+            <h4>Favorite Song</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/K4DyBUG242c?start=11" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h4>Favorite Movie</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/6ZfuNTqbHE8?start=71" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h4>Favorite TV Show</h4>
+            <iframe class="w-100 cyberpunk-border" src="https://www.youtube.com/embed/njtfNPB-YKg?start=71" allowfullscreen></iframe>
         </div>
     </div>
 </section>
 
 <!-- Favorite Websites Section -->
-<section id="favorite-websites" class="container text-center mt-5">
+<section id="websites" class="container text-center mt-5 cyberpunk-bg">
     <h2 class="text-neon">Favorite Websites</h2>
     <ul class="list-group mx-auto cyberpunk-list">
-        <li class="list-group-item cyberpunk-list"><a href="https://www.github.com">GitHub</a></li>
-        <li class="list-group-item cyberpunk-list"><a href="https://www.stackoverflow.com">Stack Overflow</a></li>
+        <li class="list-group-item cyberpunk-list"><a href="https://www.github.com" target="_blank">GitHub</a></li>
+        <li class="list-group-item cyberpunk-list"><a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a></li>
+        <li class="list-group-item cyberpunk-list"><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
     </ul>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="container text-center mt-5 cyberpunk-bg">
-    <h2 class="text-neon">My Projects</h2>
-    <table class="table cyberpunk-table">
-        <thead>
-            <tr>
-                <th>Project Name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Profile Page</td>
-                <td>My online profile page for this course.</td>
-            </tr>
-        </tbody>
-    </table>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="container text-center mt-5">
     <h2 class="text-neon">Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out using the form below.</p>
     <form action="https://formspree.io/f/your-form-id" method="POST" class="mx-auto w-100" style="max-width: 400px;">
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
@@ -136,10 +163,6 @@
         <div class="mb-3">
             <label for="email" class="form-label">Email:</label>
             <input type="email" id="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message:</label>
-            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
         </div>
         <button type="submit" class="btn cyberpunk-btn w-100">Send</button>
     </form>
