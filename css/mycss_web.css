@@ -114,12 +114,19 @@ h2 {
     border-radius: 8px;
     box-shadow: 0px 0px 15px var(--shadow-color);
     text-align: center;
+    min-height: 300px; /* FIX: Increased Neon Box Height */
 }
 
 /* Programming Skills Section (Matches Projects Section) */
 .cyberpunk-skills {
-    @extend .cyberpunk-box; /* Uses Reusable Cyberpunk Box */
+    background-color: var(--secondary-bg) !important;
+    color: var(--accent-teal) !important;
+    border: 2px solid var(--accent-teal);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px var(--shadow-color);
     display: inline-block;
+    min-height: 300px; /* FIX: Match Neon Box Height */
 }
 
 .cyberpunk-skills li {
@@ -133,9 +140,15 @@ h2 {
 
 /* Projects Section (Matches Programming Skills) */
 .cyberpunk-table {
-    @extend .cyberpunk-box;
+    background-color: var(--secondary-bg) !important;
+    color: var(--accent-teal) !important;
+    border: 2px solid var(--accent-teal);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px var(--shadow-color);
     text-align: center;
     font-weight: bold;
+    min-height: 300px; /* FIX: Match Neon Box Height */
 }
 
 .cyberpunk-table th {
@@ -148,6 +161,17 @@ h2 {
     color: var(--accent-teal) !important;
     border: 1px solid var(--accent-teal);
     font-weight: bold;
+}
+
+/* FIX: Video Styling for Web */
+iframe {
+    max-width: 560px; /* Ensures it doesn't break layout */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: 2px solid var(--accent-teal);
+    border-radius: 8px;
+    object-fit: cover; /* Ensures proper aspect ratio */
 }
 
 /* Links */
@@ -174,49 +198,6 @@ span {
 span:hover {
     color: var(--accent-teal);
     text-shadow: 0px 0px 8px rgba(0, 230, 230, 0.8);
-}
-
-/* Buttons */
-button, form button {
-    background-color: var(--accent-teal);
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Orbitron', sans-serif;
-    color: #002244;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 0px 10px var(--accent-teal);
-    border-radius: 4px;
-}
-
-button:hover, form button:hover {
-    background-color: var(--accent-pink);
-    box-shadow: 0px 0px 15px var(--accent-pink);
-    color: #ffffff;
-}
-
-/* Forms */
-form {
-    margin-top: 1rem;
-}
-
-form label {
-    display: block;
-    margin-top: 0.5rem;
-    color: var(--accent-teal);
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border: 1px solid var(--accent-teal);
-    border-radius: 4px;
-    background-color: var(--secondary-bg);
-    color: var(--accent-teal);
-    font-family: 'Orbitron', sans-serif;
 }
 
 /* Footer */
